@@ -15,5 +15,11 @@ if ($t < "20") {
 ?>
 ``` 
 
-Solución:
+Solution 1:
+```php
 
+```
+Solution 2 (with arrays):
+```php
+
+```
