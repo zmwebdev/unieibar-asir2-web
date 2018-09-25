@@ -12,4 +12,5 @@ $hora = date("G");
 
 //echo "hora : $hora";
 // falta por controlar los horarios de fuera de hora
+// IF
 echo $horario[$dia-1][$hora-8];
