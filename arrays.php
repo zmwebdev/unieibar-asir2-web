@@ -9,6 +9,16 @@ $horario = array(
     array("WEB","WEB","SIST","SIST","RED","RED")  // viernes 4
 );
 
+// OR
+$horario = [
+    ["WEB","WEB","SIST","SIST","RED","RED"],  // lunes 0
+    ["WEB","RED","WEB","WEB","SIST","SIST"],  // martes 1
+    ["WEB","WEB","SIST","SIST","RED","RED"],  // miercoles 2
+    ["WEB","WEB","SIST","SIST","RED","RED"],  // jueves 3
+    ["WEB","WEB","SIST","SIST","RED","RED"]  // viernes 4
+];
+
+
 $dia = date("N");
 $hora = date("G");
 
