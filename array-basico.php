@@ -43,4 +43,13 @@ foreach ($w as $v) {
         $suma = $suma + $x;
     }
 }
-echo "Suma de array de dos dim: $suma";
+echo "Suma de array de dos dim: $suma <br><br>";
+
+// for 2 dim
+$suma = 0;
+for ($i=0; $i < count($w); $i++) {
+    for ($j=0; $j < count($w[$i]); $j++) {
+        $suma = $suma + $w[$i][$j];
+    }
+}
+echo "Suma 2 dim con for: $suma";
