@@ -44,12 +44,13 @@ $horario2 = array(
 
 // http://php.net/manual/en/function.date.php
 
-$dia = date("N");
-$hora = date("G");
+$dia = date("N")-1;
+$hora = date("G")-8;
 
-//echo $horario[$hora-8][$dia-1] . "<br><br>";
+//echo $horario[$hora][$dia] . "<br><br>";
 
 // print horario
+/*
 echo "<table border='1'>";
 foreach ($horario as $dia) {
     echo "<tr>";
@@ -61,16 +62,23 @@ foreach ($horario as $dia) {
     echo "<tr>";
 }
 echo "</table>";
+*/
 
 // using for
 // print horario
+
+
 echo "<br><br>";
 echo "<table border='1'>";
 for ($i=0; $i<count($horario); $i++) {
     echo "<tr>";
     for ($j=0; $j<count($horario[$i]); $j++) {
         echo "<td>";
-        echo $horario[$i][$j] . "<br>";
+        if ($i == $hora && $j == $dia) {
+            echo "<b>" . $horario[$i][$j] . "</b><br>";
+        } else {
+            echo $horario[$i][$j] . "<br>";
+        }
         echo "</td>";
     }
     echo "<tr>";
