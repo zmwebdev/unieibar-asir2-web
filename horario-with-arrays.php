@@ -44,25 +44,29 @@ $horario2 = array(
 
 // http://php.net/manual/en/function.date.php
 
-$dia = date("N")-1;
-$hora = date("G")-8;
-
+$dia_actual = date("N")-1;
+$hora_actual = date("G")-8;
 //echo $horario[$hora][$dia] . "<br><br>";
 
 // print horario
-/*
+// https://stackoverflow.com/questions/141108/how-to-find-the-foreach-index
 echo "<table border='1'>";
-foreach ($horario as $dia) {
+foreach ($horario as $i=>$dia) {
     echo "<tr>";
-    foreach ($dia as $asig) {
-        echo "<td>";
-        echo $asig . "<br>";
+    foreach ($dia as $j=>$asig) {
+        echo "<td>";       
+        if ($i == $hora_actual && $j == $dia_actual) {
+            echo "<b>" . $asig . "</b>";
+            //echo "<b>" . $horario[$i][$j] . "</b>";
+        } else {
+            echo $horario[$i][$j];
+        }
         echo "</td>";
     }
     echo "<tr>";
 }
 echo "</table>";
-*/
+
 
 // using for
 // print horario
@@ -74,10 +78,10 @@ for ($i=0; $i<count($horario); $i++) {
     echo "<tr>";
     for ($j=0; $j<count($horario[$i]); $j++) {
         echo "<td>";
-        if ($i == $hora && $j == $dia) {
-            echo "<b>" . $horario[$i][$j] . "</b><br>";
+        if ($i == $hora_actual && $j == $dia_actual) {
+            echo "<b>" . $horario[$i][$j] . "</b>";
         } else {
-            echo $horario[$i][$j] . "<br>";
+            echo $horario[$i][$j];
         }
         echo "</td>";
     }
