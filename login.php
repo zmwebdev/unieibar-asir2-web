@@ -31,7 +31,7 @@ if (!$conn) {
 //echo "Connected successfully";
 
 // select from user where ....
-$query = "SELECT * FROM users WHERE name='$user' AND password='$user_password'";
+$query = "SELECT name FROM users WHERE name='$user' AND password='$user_password'";
 //$query = "SELECT * FROM users WHERE user='$user' AND password='$user_password'";
 
 //echo $query;
@@ -40,8 +40,8 @@ $result = mysqli_query($conn, $query);
 
 /* numeric array */
 $row = mysqli_fetch_array($result, MYSQLI_NUM);
-echo $row[0] . "-";
-echo $row[1];
+echo $row[0];
+
 //printf ("%s (%s)\n", $row[0], $row[1]);
 
 // if ok go to loginok.html
