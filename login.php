@@ -21,8 +21,6 @@ $db = "web";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $db);
-// http://php.net/manual/es/mysqli.construct.php
-//$mysqli = new mysqli($servername, $username, $password, $db);
 
 // Check connection
 if (!$conn) {
@@ -32,7 +30,6 @@ if (!$conn) {
 
 // select from user where ....
 $query = "SELECT name FROM users WHERE name='$user' AND password='$user_password'";
-//$query = "SELECT * FROM users WHERE user='$user' AND password='$user_password'";
 
 //echo $query;
 
@@ -40,14 +37,13 @@ $result = mysqli_query($conn, $query);
 
 /* numeric array */
 $row = mysqli_fetch_array($result, MYSQLI_NUM);
-echo $row[0];
-
-//printf ("%s (%s)\n", $row[0], $row[1]);
+//echo $row[0];
 
 // if ok go to loginok.html
 if ($row) {
     echo "Login OK";
 } else {
-    echo "Login KO";
+    //echo "Login KO";
+    header('Location: '."login.html");
 }
 // if not ok return to login.html
