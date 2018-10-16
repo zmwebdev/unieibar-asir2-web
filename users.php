@@ -9,7 +9,7 @@ $password = "root";
 $db = "web";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $db);
+$conn = mysqli_connect($servername, $username, $password, $db);
 
 // Check connection
 if (!$conn) {
@@ -24,8 +24,6 @@ $query = "SELECT name FROM users";
 $result = mysqli_query($conn, $query);
 
 /* numeric array */
-//$row = mysqli_fetch_array($result, MYSQLI_NUM);
-
 while($row = mysqli_fetch_array($result)){
     echo $row[0] . "<br>";
 }
