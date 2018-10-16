@@ -10,7 +10,6 @@ $db = "web";
 
 // Create connection
 $mysqli = new mysqli($servername, $username, $password, $db);
-
 // Check connection
 if (!$mysqli) {
     die("Connection failed: " . mysqli_connect_error());
@@ -18,7 +17,7 @@ if (!$mysqli) {
 //echo "Connected successfully";
 
 // select from user where ....
-$query = "SELECT * FROM users";
+$query = "SELECT name FROM users";
 
 //echo $query;
 
