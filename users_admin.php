@@ -42,7 +42,8 @@ $result = mysqli_query($conn, $query);
     tr:nth-child(even) {background-color: #f2f2f2;}   
 </style>
 </head>
-<table border=0>
+<body>
+<table>
 <?php
 while($row = mysqli_fetch_array($result)){
     //echo $row[0] . "<br>";
@@ -65,6 +66,8 @@ while($row = mysqli_fetch_array($result)){
     </td>
     </tr>
 <?php
-}
+}  // while
 ?>
 </table>
+</body>
+</html>
