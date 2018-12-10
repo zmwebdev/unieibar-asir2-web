@@ -29,8 +29,11 @@ $products = [
 
 $name = "Koxme";
 
+$error = 1; // 0
+
 // Render our view
-echo $twig->render('index.html', ['products' => $products] );
+//echo $twig->render('index.html', ['products' => $products] );
 //echo $twig->render('simple.html', ['izena' => $name] );
+echo $twig->render('login.html', ['error' => $error] );
 
 
