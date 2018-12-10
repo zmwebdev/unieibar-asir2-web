@@ -27,10 +27,10 @@ $products = [
     ],
 ];
 
-$name = "Peru";
+$name = "Koxme";
 
 // Render our view
-//echo $twig->render('index.html', ['products' => $products] );
-echo $twig->render('simple.html', ['izena' => $name] );
+echo $twig->render('index.html', ['products' => $products] );
+//echo $twig->render('simple.html', ['izena' => $name] );
 
 
