@@ -41,7 +41,8 @@ if ($result->num_rows > 0) {
     // session
     session_start();
     $_SESSION['user'] = $user;
-    echo "Login OK";
+    //echo "Login OK";
+    header('Location: '."sdfsdfsdfsd.php");
 } else {
     //echo "Login KO";
     header('Location: '."login.html");
