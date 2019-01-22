@@ -2,6 +2,7 @@
 // carga todas las dependencias (twig, ...)
 require_once 'vendor/autoload.php';
 
+// $loader = new Twig_Loader_Filesystem('/');
 $loader = new Twig_Loader_Filesystem('templates');
 $twig = new Twig_Environment($loader);
 
