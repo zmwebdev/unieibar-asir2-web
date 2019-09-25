@@ -9,3 +9,6 @@ image:
 #tasks:
 #- init: echo 'init script' # runs during prebuild
 #  command: echo 'start script'
+vscode:
+  extensions:
+    - felixfbecker.php-debug@1.13.0:WX8Y3EpQk3zgahy41yJtNQ==
