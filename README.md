@@ -4,7 +4,15 @@
 
 - https://www.w3schools.com/php/
 - https://github.com/zmwebdev/php-examples
-- visual code
+
+## XAMPP
+
+- https://www.apachefriends.org/index.html
+
+
+## Visual Code
+
+- https://code.visualstudio.com/
 
 ## gitpod
 - https://gitpod.io#
