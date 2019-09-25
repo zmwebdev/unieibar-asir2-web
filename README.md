@@ -11,3 +11,7 @@
 - https://www.gitpod.io/blog/gitpodify/
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/zmwebdev/unieibar-asir2-web)
+
+```
+$ php -S 0.0.0.0:8000
+```
