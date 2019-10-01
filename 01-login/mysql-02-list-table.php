@@ -16,6 +16,7 @@ if ($conn->connect_error) {
 //echo "Connected successfully";
 
 $sql = "SELECT * FROM users";
+echo $sql . "<br><br>";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
