@@ -17,13 +17,13 @@ if ($user == $user1){
     if ($password == $user1_password) {
         echo "OK";
     } else{
-        echo "KO"
+        echo "KO";
     }
 } else if ($user == $user2){
     if ($password == $user2_password) {
         echo "OK";
     } else {
-        echo "KO"
+        echo "KO";
     }
 } else {
     echo "KO";
@@ -42,7 +42,7 @@ if ($user == $user1 && $password == $user1_password) {
 
 
 //
-if (($user == $user1 && $password == $user1_password) || 
+if (($user == $user1 && $password == $user1_password) ||
     ($user == $user2 && $password == $user2_password)) {
     echo "OK";
 } else {
