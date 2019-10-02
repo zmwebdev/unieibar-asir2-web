@@ -12,4 +12,4 @@ CREATE TABLE IF NOT EXISTS users (
 /* insert */
 /* koxme: p1 */
 INSERT INTO users (user, pass)
-VALUES ('koxme', '$2y$10$0oQAjTeZJA93WT6p.Xqp8ODf5DYtFMFIDxdkk50ZX01FBmErsg6sW'); 
+VALUES ('koxme', '$2y$10$U6Wp.he9O.JQWucsJh.tPOOv4RKM.kxnBboCrPwTbjdNXqIlotyPO'); 
