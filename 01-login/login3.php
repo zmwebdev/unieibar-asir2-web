@@ -1,6 +1,6 @@
 <?php
 
-echo "login3.php";
+//echo "login3.php";
 
 // definir los datos
 $user1 = "koxme";
