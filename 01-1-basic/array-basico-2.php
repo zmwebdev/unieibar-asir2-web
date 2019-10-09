@@ -26,7 +26,26 @@ while ($i < count($v)) {
     $i++;
 }
 
-echo "batura while: " . $suma;
+echo "batura while: " . $suma . "<br>";
 
 // foreach
+
+foreach ($v as $x) {
+    //echo $x . "<br>";
+    $suma = $suma + $x;
+}
+
+echo "batura foreach: " . $suma;
+
+
+
+
+
+
+
+
+
+
+
+
 
