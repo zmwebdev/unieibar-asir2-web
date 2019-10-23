@@ -1,58 +1,53 @@
 <?php
 
-// Read from the formulary (login.html)
-// user / password
-$user = $_POST["user"];
-$user_password = $_POST["password"];
-$hash = password_hash($user_password, PASSWORD_DEFAULT);
-
-// connect to mysql
-// http://php.net/manual/es/mysqli.construct.php
-// https://www.w3schools.com/php/php_mysql_connect.asp
-
-$servername = "localhost:3307";
-$username = "root";
-$password = "root";
-//$password = "";
-$db = "web";
+$servername = "localhost";
+$username = "koxme";
+$password = "pasahitza";
+$dbname = "asir2_web";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $db);
+$conn = new mysqli($servername, $username, $password,$dbname);
 
 // Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
 //echo "Connected successfully";
 
-// select from user where ....
-$query = "SELECT name,pass FROM users WHERE name='$user'";
+// formulariotik bidalitako datuak irakurri
+// leer desde el formulario
+$user =  $_POST['user'];
+$password = $_POST['password'];
 
-//echo $query;
+//
+$sql = "SELECT * FROM users WHERE user = '$user';";
+//echo $sql . "<br><br>";
+//
 
-$result = mysqli_query($conn, $query);
-
-// https://www.w3schools.com/php/func_mysqli_fetch_array.asp
-/* numeric array */
-//$row = mysqli_fetch_array($result, MYSQLI_NUM);
-//echo $row[0];
-
-// Associative array
-$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-
-if ($row) {
-    if (password_verify($row["pass"], $hash)) {
-        // Success!
-        echo "Success!";
+$result = $conn->query($sql);
+/*
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    if ($user == $row["user"]){
+        if (password_verify($password, $row["pass"])) {
+            echo "OK";
+        } else{
+            echo "KO";
+        }
+    } else {
+        echo "KO";
     }
-    else {
-        // Invalid credentials
-        //echo "Error!";
-        header('Location: '."login.html");
-    }
-    
 } else {
-    // Invalid credentials
-    //echo "Error!";
-    header('Location: '."login.html");
+    echo "KO";
 }
+*/
+$row = $result->fetch_assoc();
+if (($result->num_rows > 0) && ($user == $row["user"]) && (password_verify($password, $row["pass"]))) {
+    echo "OK";
+} else{
+    echo "KO";
+}
+
+
+$conn->close();

@@ -1,8 +1,8 @@
 /* https://mariadb.com/kb/en/library/documentation/ */
 /* databasea sortu */
-CREATE DATABASE IF NOT EXISTS login;
+CREATE DATABASE IF NOT EXISTS asir2_web;
 
-use login;
+use asir2_web;
 
 CREATE TABLE IF NOT EXISTS users (
     user VARCHAR(50) NOT NULL PRIMARY KEY,
