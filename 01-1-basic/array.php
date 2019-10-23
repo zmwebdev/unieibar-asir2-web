@@ -30,8 +30,13 @@ echo "Peter is " . $age['Peter'] . " years old.";
 //
 $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
 
-foreach($age as $x => $x_value) {
-    echo "Key=" . $x . ", Value=" . $x_value;
+foreach($age as $x_value) {
+    echo "Value=" . $x_value;
+    echo "<br>";
+}
+
+foreach($age as $izena => $izena_value) {
+    echo "Key=" . $izena . ", Value=" . $izena_value;
     echo "<br>";
 }
 
