@@ -11,10 +11,10 @@ $hash = password_hash($user_password, PASSWORD_DEFAULT);
 // https://www.w3schools.com/php/php_mysql_connect.asp
 
 $servername = "localhost:3307";
-$username = "koxme";
-$password = "pasahitza";
+$username = "root";
+$password = "root";
 //$password = "";
-$db = "login";
+$db = "web";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $db);
@@ -40,21 +40,19 @@ $result = mysqli_query($conn, $query);
 // Associative array
 $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 
-if (password_verify($row["pass"], $hash)) {
-    // Success!
-    echo "Success!";
-}
-else {
-    // Invalid credentials
-    echo "Error!";
-}
-
-
-// if ok go to loginok.html
 if ($row) {
-    echo "Login OK";
+    if (password_verify($row["pass"], $hash)) {
+        // Success!
+        echo "Success!";
+    }
+    else {
+        // Invalid credentials
+        //echo "Error!";
+        header('Location: '."login.html");
+    }
+    
 } else {
-    //echo "Login KO";
+    // Invalid credentials
+    //echo "Error!";
     header('Location: '."login.html");
 }
-// if not ok return to login.html
