@@ -6,7 +6,8 @@ Ariketa: Irudiak rotatu, eskalatu, ... egiten dituen aplikazio bat. Irudi fitxat
 
 ```
 sudo apt-get install php-imagick
-sudo apt-get install php7.2-mbstring
+sudo apt-get install php7-mbstring
+#sudo apt-get install php7.3-mbstring
 
 sudo systemctl restart apache2
 ```

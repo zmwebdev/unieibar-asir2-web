@@ -13,8 +13,11 @@ Image::configure(array('driver' => 'imagick'));
 // and you are ready to go ...
 $image = Image::make('eibar.jpg')->resize(300, 200);
 
+// finally we save the image as a new file
+$image->save('eibar2.jpg');
 //
-echo "Kaixo";
+echo "<img src=eibar.jpg>";
+echo "<img src=eibar2.jpg>";
 
 /*
 // import the Intervention Image Manager Class
