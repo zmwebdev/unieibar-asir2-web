@@ -4,6 +4,12 @@ Ariketa: Irudiak rotatu, eskalatu, ... egiten dituen aplikazio bat. Irudi fitxat
 
 # Instalazioa
 
+http://image.intervention.io/
+
+```
+composer require intervention/image
+```
+
 ```
 sudo apt-get install php-imagick
 sudo apt-get install php7-mbstring
