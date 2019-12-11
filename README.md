@@ -12,11 +12,11 @@ apt update
 apt install openssh-server
 
 # Maria DB
-sudo apt install mariadb-server
+apt install mariadb-server
 
 # PHP apache
-sudo add-apt-repository ppa:ondrej/php
-sudo apt install php7.3 libapache2-mod-php7.3 php-mysql
+add-apt-repository ppa:ondrej/php
+apt install php7.3 libapache2-mod-php7.3 php-mysql
 ```
 
 ## PHP
