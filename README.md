@@ -1,5 +1,24 @@
 # unieibar-asir2-web
 
+## Azpiegitura
+
+Ubuntu server 18 (Apache + PHP + MySQL-MariaDB)
+
+[Visual code]<---ssh---->[Ubuntu]
+
+```
+#ubuntu
+apt update
+apt install openssh-server
+
+# Maria DB
+sudo apt install mariadb-server
+
+# PHP apache
+sudo add-apt-repository ppa:ondrej/php
+sudo apt install php7.3 libapache2-mod-php7.3 php-mysql
+```
+
 ## PHP
 
 - https://www.w3schools.com/php/
