@@ -17,6 +17,23 @@ apt install mariadb-server
 # PHP apache
 add-apt-repository ppa:ondrej/php
 apt install php7.3 libapache2-mod-php7.3 php-mysql
+
+# git
+apt install git
+```
+
+vscode install extension: Visual Studio Code Remote Development Extension Pack
+
+```
+cd
+mkdir workspace
+cd /var/www/html
+sudo ln -s ~/workspace workspace
+#
+cd
+cd workspace
+#cd ~/workspace
+git clone ...
 ```
 
 ## PHP
