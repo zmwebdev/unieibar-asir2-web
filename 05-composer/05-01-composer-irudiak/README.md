@@ -12,8 +12,8 @@ composer require intervention/image
 
 ```
 sudo apt-get install php-imagick
-sudo apt-get install php7-mbstring
-#sudo apt-get install php7.3-mbstring
+#sudo apt-get install php7-mbstring
+sudo apt-get install php7.3-mbstring
 
 sudo systemctl restart apache2
 ```
