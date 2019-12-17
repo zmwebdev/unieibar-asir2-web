@@ -36,6 +36,11 @@ cd workspace
 git clone ...
 ```
 
+PHP erroreak ikusteko:
+```
+tail -f /var/log/apache2/error.log
+```
+
 ## PHP
 
 - https://www.w3schools.com/php/
