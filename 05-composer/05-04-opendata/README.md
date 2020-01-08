@@ -1,0 +1,1 @@
+https://opendata.euskadi.eus/hasiera/
