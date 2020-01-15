@@ -10,4 +10,5 @@ $forecast = (new DarkSkyApi('03ad9b2373f0c2c60eec73c139078b28'))
     ->units('si')
     ->language('en')
     ->forecast(['currently', 'daily']);
+    
 echo $forecast->currently()->summary();
